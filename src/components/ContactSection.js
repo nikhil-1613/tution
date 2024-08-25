@@ -24,7 +24,8 @@ function ContactSection() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Sending the form using emailjs with form reference
-        emailjs.sendForm('service_yli0n8p', 'template_grpd159', form.current, 'hVO56a1Tm35GdsWuw')
+        emailjs.sendForm('service_sjpokym', 'template_1ugeevw', form.current, 'hVO56a1Tm35GdsWuw')
+        //emailjs.sendForm('service_yli0n8p', 'template_grpd159', form.current, 'hVO56a1Tm35GdsWuw')
         .then(
             (response) => {
                 console.log('SUCCESS!', response.text);
