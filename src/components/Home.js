@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-// import { FaPhone, FaEnvelope, FaMapMarker, FaBars } from 'react-icons/fa';
 import {FaBars} from 'react-icons/fa'
-// import { auth } from "../firebase/firebaseConfig";
-// import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-// import { getFirestore, collection, doc, addDoc, query, where, getDocs } from "firebase/firestore";
-// import { toast, ToastContainer } from "react-toastify";
-// import bcrypt from 'bcryptjs';
 import "../styles/Home.css";
 import backgroundImage from "../assets/images/home_background.jpg";
 import services from "../assets/images/services.jpg";
@@ -183,95 +177,6 @@ const Home = () => {
         </div>
     );
 
-//     function RegisterOrLogin() {
-//         const [isLogin, setIsLogin] = useState(false);
-//         const [email, setEmail] = useState("");
-//         const [password, setPassword] = useState("");
-
-//         const handleSignup = async () => {
-//             try {
-//                 const hashedPassword = await bcrypt.hash(password, 10); // 10 is the saltRounds
-
-//                 const authUserCredential = await createUserWithEmailAndPassword(auth, email, password);
-
-//                 const db = getFirestore();
-//                 await addDoc(collection(db, "users"), {
-//                     uid: authUserCredential.user.uid,
-//                     email: email,
-//                     password: hashedPassword // Save hashed password to Firestore
-//                 });
-//                 if (email === "admin123@gmail.com") {
-//                     // Navigate to admin screen
-//                     window.location.href = "/adminscreen";
-//                 } else {
-//                     toast.success("User registered successfully!");
-//                     // Proceed with regular navigation or display success message
-//                 }
-//             } catch (error) {
-//                 console.log(error);  // Log the entire error object
-//                 toast.error('Signup failed');
-//             }
-//         };
-
-//         const handleLogin = async () => {
-//             console.log("Logging in with:", email, password);
-//             try {
-//                 await signInWithEmailAndPassword(auth, email, password);
-//                 toast.success("Logged in successfully!");
-//             } catch (error) {
-//                 console.log(error);  // Log the entire error object
-//                 toast.error('Login failed');
-//             }
-//         };
-
-//         const handleToggleToSignup = (event) => {
-//             event.preventDefault();
-//             setIsLogin(false);
-//         };
-
-//         const handleToggleToLogin = (event) => {
-//             event.preventDefault();
-//             setIsLogin(true);
-//         };
-
-//         return (
-//             <div id="register" className="section">
-//                 {isLogin ? (
-//                     <>
-//                         <h2 className="register-title">Login and Continue</h2>
-//                         <form className="register-form">
-//                             <label htmlFor="email">Email</label>
-//                             <input type="email" id="email" name="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Enter your email" />
-//                             <label htmlFor="password">Password</label>
-//                             <input type="password" id="password" name="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Enter your password" />
-//                             <button type="button" onClick={handleLogin}>Login</button>
-//                             <p className="toggle-form">
-//                                 New User?? <a href="#register" style={{ color: 'yellow' }} onClick={handleToggleToSignup}>Sign Up</a>
-//                             </p>
-//                         </form>
-//                     </>
-//                 ) : (
-//                     <>
-//                         <h2 className="register-title">
-//                             <span style={{ color: 'yellow' }}>ENROLL</span>
-//                             <span style={{ color: 'white' }}> Now</span>
-//                         </h2>
-//                         <form className="register-form">
-//                             <label htmlFor="email">Email</label>
-//                             <input type="email" id="email" name="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Enter your email" />
-//                             <label htmlFor="password">Password</label>
-//                             <input type="password" id="password" name="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Enter your password" />
-//                             <button type="button" onClick={handleSignup}>Submit</button>
-//                             <p className="toggle-form">
-//                                 Already an existing user?? <a href="#register" style={{ color: 'yellow' }} onClick={handleToggleToLogin}>Sign In</a>
-//                             </p>
-//                         </form>
-//                     </>
-//                 )}
-//                 <ToastContainer />
-//             </div>
-//         );
-//     }
 
 };
 export default Home;
