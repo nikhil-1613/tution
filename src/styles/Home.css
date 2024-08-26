@@ -95,6 +95,64 @@ html, body {
 #home {
   display: flex;
   justify-content: center;
+  align-items: center; /* Center the entire content vertically and horizontally */
+  flex-direction: column;
+  padding: 20px; /* Add some padding for better appearance */
+  min-height: 100vh; /* Ensure the container takes full viewport height */
+  box-sizing: border-box; /* Include padding in width and height calculations */
+}
+
+#home h1,
+#home h2 {
+  color: white;
+  text-align: center; /* Center the text horizontally */
+  width: 100%; /* Full width to maintain center alignment */
+  margin: 10px 0; /* Spacing between h1 and h2 */
+  font-size: 2rem; /* Base font size for larger screens */
+}
+
+#home p {
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Responsive Styles */
+
+/* Small devices (phones, less than 600px) */
+@media (max-width: 600px) {
+  #home{
+    position: relative;
+  }
+  #home h1,
+  #home h2 {
+    font-size: 1.5rem; /* Reduce font size for smaller screens */
+  }
+
+  #home p {
+    font-size: 1.2rem; /* Adjust paragraph font size for readability */
+  }
+}
+
+/* Medium devices (tablets, 600px to 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  #home{
+    width: 10px;
+  }
+  #home h1,
+  #home h2 {
+    font-size: 1.8rem; /* Slightly larger font size for tablets */
+  }
+
+  #home p {
+    font-size: 1.3rem; /* Adjust paragraph font size */
+  }
+}
+
+/* #home {
+  display: flex;
+  justify-content: center;
   align-self: center;
   flex-direction: column;
 }
@@ -102,14 +160,14 @@ html, body {
 #home h2 {
   color: white;
   text-align: center; /* Center the text horizontally */
-  width: 100%; /* Full width to maintain center alignment */
-  margin: 10px 0; /* Spacing between h1 and h2 */
-}
-#home p {
+  /* width: 100%; 
+  margin: 10px 0;  */
+/* } */
+/* #home p {
   color: white;
   font-size: 1.4rem;
   text-align: center;
-}
+} */
 /*Home Section Styling Ends*/
 
 /*About section styling starts*/
@@ -180,7 +238,21 @@ html, body {
 .info-box #text {
   color: white;
   font-size: 25px;
-} /* about section styling ends */
+} 
+ /* about section responsive */
+ @media (max-width: 640px) {
+  .info-box{
+    height: 340px;
+  }
+  .info-box img{
+    height: 200px;
+    width: 230px;
+  }
+ }
+
+
+
+/* about section styling ends */
 
 /* Services section styling starts */
 #services {
