@@ -5,6 +5,57 @@
 .services-content, .services-image, .services-info {
     box-sizing: border-box;  
 } */
+ /* Global Styles */
+html, body {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Include padding and border in width and height calculations */
+}
+
+/* Ensure Flex Containers Handle Overflow */
+.navbar, #home, #about, #services, #contact {
+  box-sizing: border-box; /* Include padding in width and height calculations */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Ensure Elements Fit Within the Viewport */
+ .services-content, .knowus-content, .reviews-container {
+  box-sizing: border-box; /* Include padding and border in width and height calculations */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Review Section Adjustments */
+.review-box {
+  width: 100%; /* Ensure review boxes do not exceed container width */
+  max-width: 357px; /* Maintain maximum width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+@media (max-width: 768px) {
+  .review-box {
+    max-width: 100%; /* Ensure review boxes fit within viewport */
+  }
+
+  .services-image, .services-info {
+    max-width: 100%; /* Ensure images and info do not exceed viewport width */
+    box-sizing: border-box;
+  }
+}
+
+/* Ensure Cards Fit Within Container */
+.card, .info-box {
+  width: 100%; /* Ensure cards do not exceed container width */
+  max-width: 360px; /* Maintain maximum width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+@media (max-width: 768px) {
+  .card, .info-box {
+    max-width: 100%; /* Ensure cards and info boxes fit within viewport */
+  }
+}
+
 /* Global Styles */
 html, body {
   overflow-x: hidden;
@@ -93,6 +144,7 @@ html, body {
 
 /* Home Section Styling Starts*/
 #home {
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center; /* Center the entire content vertically and horizontally */
@@ -168,9 +220,9 @@ html, body {
   font-size: 1.4rem;
   text-align: center;
 } */
-/*Home Section Styling Ends*/
+/* /Home Section Styling Ends/ */
 
-/*About section styling starts*/
+/* /About section styling starts/ */
 #about {
   padding: 10px;
   text-align: left; 
@@ -241,6 +293,9 @@ html, body {
 } 
  /* about section responsive */
  @media (max-width: 640px) {
+  #about .head{
+    font-size: 20px;
+  }
   .info-box{
     height: 340px;
   }
@@ -426,7 +481,7 @@ html, body {
 
 /* knowus section ends */
 /* reviews section starts */
-/*reviewss section ends*/
+/* /reviewss section ends/ */
 #reviews {
   background-color: black;
   padding: 20px; /* Provides consistent padding around the section */
@@ -505,8 +560,8 @@ html, body {
     flex: 0 0 calc(100% - 20px); /* Adjusts width to fit one box per row */
   }
 }
-
-/*Register section starts*/
+/* 
+/Register section starts/ */
 
 #register {
   display: flex;
