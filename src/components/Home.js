@@ -70,7 +70,7 @@ const Home = () => {
             </div>
 
             <div id="services" className="section">
-                <h3 className="services-title">Experience We Have</h3>
+                <h3 className="services-title"> We Have</h3>
                 <div className="services-content">
                     <img src={services} alt="Services provided" className="services-image" />
                     <div className="services-info">
